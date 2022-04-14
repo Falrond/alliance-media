@@ -38,7 +38,7 @@ export default function WhatWeOffer() {
             </StyledText>
             <StyledText
               hasdeclaredtextalign="center"
-              hasdeclaredfontsize="15px"
+              hasdeclaredfontsize="16px"
               hasdeclaredfontweight="500"
               hasdeclaredlineheight="1.6"
               hasdeclaredpadding="0 1.6rem"
@@ -61,7 +61,7 @@ export default function WhatWeOffer() {
             </StyledText>
             <StyledText
               hasdeclaredtextalign="center"
-              hasdeclaredfontsize="15px"
+              hasdeclaredfontsize="16px"
               hasdeclaredfontweight="500"
               hasdeclaredlineheight="1.6"
               hasdeclaredpadding="0 1.6rem"
@@ -85,7 +85,7 @@ export default function WhatWeOffer() {
             </StyledText>
             <StyledText
               hasdeclaredtextalign="center"
-              hasdeclaredfontsize="15px"
+              hasdeclaredfontsize="16px"
               hasdeclaredfontweight="500"
               hasdeclaredlineheight="1.6"
               hasdeclaredpadding="0 1.6rem"
