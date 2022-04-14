@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/organisms/Header/Header";
-import MeetUs from "../components/organisms/MeetUs/MeetUs";
+import WhatWeOffer from "../components/organisms/WhatWeOffer/WhatWeOffer";
 import HeroInfo from "../components/organisms/Header/HeroInfo/HeroInfo";
 import { StyledHeroImageWrapper } from "../components/atoms/HeroImage/StyledHeroImageWrapper";
 import { StyledIndexMain } from "../components/atoms/Main/StyledIndexMain";
@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
         <GatsbyImage image={image} alt="heroImage" />
       </StyledHeroImageWrapper>
       <HeroInfo />
-      <MeetUs />
+      <WhatWeOffer />
     </StyledIndexMain>
   );
 };
@@ -25,7 +25,7 @@ export const query = graphql`
   query getHeroImage {
     file(relativePath: { eq: "hero7.jpg" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(layout: FULL_WIDTH, quality: 100)
       }
     }
   }
