@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const StyledWhatWeOfferWrapper = styled.div`
+export const StyledWhoWeAreWrapper = styled.div`
   text-align: center;
   padding: 10px;
-  color: #333;
+  color: #eee;
+  display: flex;
 `;

@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/organisms/Header/Header";
+import WhoWeAre from "../components/organisms/WhoWeAre/WhoWeAre";
 import WhatWeOffer from "../components/organisms/WhatWeOffer/WhatWeOffer";
 import HeroInfo from "../components/organisms/Header/HeroInfo/HeroInfo";
 import { StyledHeroImageWrapper } from "../components/atoms/HeroImage/StyledHeroImageWrapper";
@@ -16,6 +17,7 @@ const IndexPage = ({ data }) => {
         <GatsbyImage image={image} alt="heroImage" />
       </StyledHeroImageWrapper>
       <HeroInfo />
+      <WhoWeAre />
       <WhatWeOffer />
     </StyledIndexMain>
   );
