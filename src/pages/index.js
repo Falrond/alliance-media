@@ -9,6 +9,7 @@ import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import SideBar from "../components/molecules/SideBar/SideBar";
 import SideBarButton from "../components/atoms/SideBarButton/SideBarButton";
+import Carousel from "../components/organisms/Carousel/Carousel";
 
 const IndexPage = ({ data }) => {
   const [show, setShow] = useState(false);
@@ -24,6 +25,7 @@ const IndexPage = ({ data }) => {
       <HeroInfo />
       <WhoWeAre />
       <WhatWeOffer />
+      <Carousel />
     </StyledIndexMain>
   );
 };

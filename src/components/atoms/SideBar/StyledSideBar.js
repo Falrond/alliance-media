@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export const StyledSideBar = styled(motion.nav)`
   position: fixed;
   top: 0;
-  right: -200;
+  right: 0;
   bottom: 0;
   opacity: 0;
   background-color: #0e0e0e;

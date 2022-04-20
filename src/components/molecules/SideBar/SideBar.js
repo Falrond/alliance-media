@@ -6,7 +6,7 @@ import SocialIcons from "../SocialIcons/SocialIcons";
 
 const variants = {
   open: { opacity: 1, right: 0 },
-  closed: { opacity: 0, right: "-200px" },
+  closed: { opacity: 0, right: "-100%" },
 };
 
 export default function SideBar({ show, setShow }) {

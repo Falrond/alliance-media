@@ -5,4 +5,7 @@ export const StyledWhoWeAreWrapper = styled.div`
   padding: 10px;
   color: #eee;
   display: flex;
+  @media only screen and (max-width: 916px) {
+    flex-direction: column;
+  }
 `;
