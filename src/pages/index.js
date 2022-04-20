@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/organisms/Header/Header";
 import WhoWeAre from "../components/organisms/WhoWeAre/WhoWeAre";
 import WhatWeOffer from "../components/organisms/WhatWeOffer/WhatWeOffer";
@@ -7,12 +7,17 @@ import { StyledHeroImageWrapper } from "../components/atoms/HeroImage/StyledHero
 import { StyledIndexMain } from "../components/atoms/Main/StyledIndexMain";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import SideBar from "../components/molecules/SideBar/SideBar";
+import SideBarButton from "../components/atoms/SideBarButton/SideBarButton";
 
 const IndexPage = ({ data }) => {
+  const [show, setShow] = useState(false);
   const image = getImage(data.file.childImageSharp);
   return (
     <StyledIndexMain>
       <Header />
+      <SideBarButton show={show} setShow={setShow} />
+      <SideBar show={show} setShow={setShow} />
       <StyledHeroImageWrapper>
         <GatsbyImage image={image} alt="heroImage" />
       </StyledHeroImageWrapper>
@@ -32,15 +37,5 @@ export const query = graphql`
     }
   }
 `;
-
-// query getHeroImage {
-//   file(relativePath:{eq:"hero.jpg"}) {
-//     childImageSharp {
-//       fluid {
-//         src
-//       }
-//     }
-//   }
-// }
 
 export default IndexPage;

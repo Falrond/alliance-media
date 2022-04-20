@@ -54,6 +54,7 @@ export default function WhoWeAre() {
             <StaticImage
               src="../../../assets/images/oferta_bg.png"
               alt="sectionImage"
+              quality={100}
             />
           </StyledWhoWeAreImageWrapper>
         </StyledWhoWeAreBox>

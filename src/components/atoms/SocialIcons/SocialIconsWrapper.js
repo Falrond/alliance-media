@@ -21,4 +21,8 @@ export const SocialIconsWrapper = styled.div`
       color: #ffc730;
     }
   }
+
+  @media only screen and (max-width: 916px) {
+    display: none;
+  }
 `;

@@ -18,15 +18,6 @@ export default function Logo() {
     >
       <Link to="/">
         <img src={logo} alt="logo"></img>
-        {/* <StyledText
-          hasdeclaredletterspacing="1px"
-          hasdeclaredfontsize="28px"
-          hasdeclaredfontcolor="#fff"
-          hasdeclaredmargin="0 0 0 18px"
-          as="p"
-        >
-          Alliance Media
-        </StyledText> */}
       </Link>
     </StyledLogo>
   );
