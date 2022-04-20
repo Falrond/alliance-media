@@ -10,7 +10,7 @@ export const StyledSideBar = styled(motion.nav)`
   background-color: #0e0e0e;
   width: 300px;
   z-index: 2;
-  box-shadow: 21px 2px 48px -1px rgba(0, 0, 0, 0.9);
+  box-shadow: -12px 2px 48px -1px rgba(0, 0, 0, 0.9);
   display: none;
 
   @media only screen and (max-width: 916px) {
