@@ -11,6 +11,7 @@ import SideBar from "../components/molecules/SideBar/SideBar";
 import SideBarButton from "../components/atoms/SideBarButton/SideBarButton";
 import Carousel from "../components/organisms/Carousel/Carousel";
 import Slider from "../components/organisms/Slider/Slider";
+import SlickSlider from "../components/organisms/SlickSlider/SlickSlider";
 
 const IndexPage = ({ data }) => {
   const [show, setShow] = useState(false);
@@ -27,7 +28,8 @@ const IndexPage = ({ data }) => {
       <WhoWeAre />
       <WhatWeOffer />
       {/* <Carousel /> */}
-      <Slider />
+      {/* <Slider /> */}
+      <SlickSlider />
     </StyledIndexMain>
   );
 };
