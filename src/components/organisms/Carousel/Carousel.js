@@ -5,6 +5,8 @@ import { StyledCarouselImg } from "../../atoms/Carousel/StyledCarouselImg";
 import images from "../../../assets/data/carouselImages";
 import { StaticImage } from "gatsby-plugin-image";
 import { useEffect, useRef, useState } from "react";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 export default function Carousel() {
   const [width, setWidth] = useState(0);
@@ -22,18 +24,23 @@ export default function Carousel() {
         dragConstraints={{ right: 0, left: -width }}
       >
         <StyledCarouselImg>
-          <StaticImage
-            src="../../../assets/images/img1.jpg"
-            alt="img1"
-            quality={100}
-          />
+          <Zoom>
+            <StaticImage
+              src="../../../assets/images/img1.jpg"
+              alt="img1"
+              quality={100}
+            />
+          </Zoom>
         </StyledCarouselImg>
+
         <StyledCarouselImg>
-          <StaticImage
-            src="../../../assets/images/img2.jpg"
-            alt="img2"
-            quality={100}
-          />
+          <Zoom>
+            <StaticImage
+              src="../../../assets/images/img2.jpg"
+              alt="img2"
+              quality={100}
+            />
+          </Zoom>
         </StyledCarouselImg>
         <StyledCarouselImg>
           <StaticImage

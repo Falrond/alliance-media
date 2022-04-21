@@ -23,10 +23,10 @@ export default function WhoWeAre() {
   ) => {
     gsap.fromTo(
       element,
-      { x: "-=400", opacity: 0, rotate: 90 },
+      { x: "-=400", opacity: 0, scale: 0 },
       {
         x: 0,
-        rotate: 0,
+        scale: 1,
         opacity: 1,
         scrollTrigger: {
           trigger: triggerElement,
