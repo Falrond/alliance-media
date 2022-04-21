@@ -96,14 +96,14 @@ export default function Slider() {
                         {" "}
                         <h1>{slide.title}</h1>
                         <h2>{slide.description}</h2>
-                        {/* <GatsbyImage
+                        <GatsbyImage
                           image={
                             data.allFile.edges.find(
                               (item) => item.node.relativePath === slide.img
                             ).node.childImageSharp.gatsbyImageData
                           }
                           alt=""
-                        /> */}
+                        />
                       </div>
                       <div>
                         <StyledButtonPagination
