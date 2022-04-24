@@ -10,8 +10,9 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import SideBar from "../components/molecules/SideBar/SideBar";
 import SideBarButton from "../components/atoms/SideBarButton/SideBarButton";
 import Carousel from "../components/organisms/Carousel/Carousel";
-import Slider from "../components/organisms/Slider/Slider";
 import SlickSlider from "../components/organisms/SlickSlider/SlickSlider";
+import Realizations from "../components/organisms/Realizations.js/Realizations";
+import Services from "../components/organisms/Services/Services";
 
 const IndexPage = ({ data }) => {
   const [show, setShow] = useState(false);
@@ -27,9 +28,9 @@ const IndexPage = ({ data }) => {
       <HeroInfo />
       <WhoWeAre />
       <WhatWeOffer />
-      {/* <Carousel /> */}
-      {/* <Slider /> */}
-      <SlickSlider />
+      {/* <SlickSlider /> */}
+      <Realizations />
+      <Services />
     </StyledIndexMain>
   );
 };
