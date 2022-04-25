@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
 import { StyledServicesSection } from "../../atoms/Services/StyledServicesSection";
 import { StyledServicesWrapper } from "../../atoms/Services/StyledServicesWrapper";
 import { StyledText } from "../../atoms/Text/StyledText";
@@ -10,11 +12,25 @@ import { FiEdit } from "@react-icons/all-files/fi/FiEdit";
 import { AiOutlineCheck } from "@react-icons/all-files/ai/AiOutlineCheck";
 import { BsBrush } from "@react-icons/all-files/bs/BsBrush";
 import { BiStore } from "@react-icons/all-files/bi/BiStore";
+import { scrollAnimation } from "../../../assets/animations/gsapAnimations";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Services() {
+  const headerSliderSection = useRef(null);
+  const section = useRef(null);
+  const wrapper = useRef(null);
+
+  useEffect(() => {
+    const sectionRef = section.current;
+    const animateWrapper = wrapper.current;
+
+    scrollAnimation(animateWrapper, sectionRef, "20%", "bottom");
+  });
+
   return (
-    <StyledServicesSection>
-      <StyledServicesWrapper>
+    <StyledServicesSection ref={section}>
+      <StyledServicesWrapper ref={wrapper}>
         <StyledText
           as="h2"
           hasdeclaredfontsize="44px"
@@ -37,6 +53,7 @@ export default function Services() {
               Projekt Logo
             </StyledText>
             <StyledText
+              as="div"
               hasdeclaredfontsize="16px"
               hasdeclaredfontweight="500"
               hasdeclaredlineheight="1.6"
@@ -97,6 +114,7 @@ export default function Services() {
               Identyfikacja wizualna
             </StyledText>
             <StyledText
+              as="div"
               hasdeclaredfontsize="16px"
               hasdeclaredfontweight="500"
               hasdeclaredlineheight="1.6"
@@ -150,6 +168,7 @@ export default function Services() {
               Strona Wizytówka
             </StyledText>
             <StyledText
+              as="div"
               hasdeclaredfontsize="16px"
               hasdeclaredfontweight="500"
               hasdeclaredlineheight="1.6"
@@ -203,6 +222,7 @@ export default function Services() {
               Sklep internetowy
             </StyledText>
             <StyledText
+              as="div"
               hasdeclaredfontsize="16px"
               hasdeclaredfontweight="500"
               hasdeclaredlineheight="1.6"

@@ -8,9 +8,9 @@ export const StyledBox = styled.div`
   padding: 30px;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #777;
+  border: 1px solid #ffc730;
   border-right: none;
   &:last-of-type {
-    border-right: 1px solid #777;
+    border-right: 1px solid #ffc730;
   }
 `;

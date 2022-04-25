@@ -9,6 +9,7 @@ import { StyledWhatWeOfferWrapper } from "../../atoms/WhatWeOffer/StyledWhatWeOf
 import { StyledBoxWrapper } from "../../atoms/WhatWeOffer/StyledBoxWrapper";
 import { StyledBox } from "../../atoms/WhatWeOffer/StyledBox";
 import { StyledText } from "../../atoms/Text/StyledText";
+import { scrollAnimation } from "../../../assets/animations/gsapAnimations";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,27 +20,27 @@ export default function WhatWeOffer() {
   const section = useRef(null);
   const sectionHeader = useRef(null);
 
-  const scrollAnimation = (
-    element,
-    triggerElement,
-    triggerPos,
-    viewportPos
-  ) => {
-    gsap.fromTo(
-      element,
-      { y: "-=200", opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: triggerElement,
-          start: `${triggerPos} ${viewportPos}`, // when the top of the trigger hits the top of the viewport
-          end: "+=200", // end after scrolling 500px beyond the start
-          scrub: 1.5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-        },
-      }
-    );
-  };
+  // const scrollAnimation = (
+  //   element,
+  //   triggerElement,
+  //   triggerPos,
+  //   viewportPos
+  // ) => {
+  //   gsap.fromTo(
+  //     element,
+  //     { y: "-=200", opacity: 0 },
+  //     {
+  //       y: 0,
+  //       opacity: 1,
+  //       scrollTrigger: {
+  //         trigger: triggerElement,
+  //         start: `${triggerPos} ${viewportPos}`, // when the top of the trigger hits the top of the viewport
+  //         end: "+=200", // end after scrolling 500px beyond the start
+  //         scrub: 1.5, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+  //       },
+  //     }
+  //   );
+  // };
 
   useEffect(() => {
     const animateBox1 = box1.current;
