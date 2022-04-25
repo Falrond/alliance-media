@@ -53,9 +53,9 @@ export default function SlickSlider() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    speed: 3000,
-    autoplaySpeed: 3000,
+    // autoplay: true,
+    // speed: 3000,
+    // autoplaySpeed: 3000,
     // cssEase: "linear",
     // pauseOnHover: false,
   };

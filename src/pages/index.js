@@ -13,6 +13,7 @@ import Carousel from "../components/organisms/Carousel/Carousel";
 import SlickSlider from "../components/organisms/SlickSlider/SlickSlider";
 import Realizations from "../components/organisms/Realizations.js/Realizations";
 import Services from "../components/organisms/Services/Services";
+import Footer from "../components/organisms/Footer/Footer";
 
 const IndexPage = ({ data }) => {
   const [show, setShow] = useState(false);
@@ -31,6 +32,7 @@ const IndexPage = ({ data }) => {
       {/* <SlickSlider /> */}
       <Realizations />
       <Services />
+      <Footer />
     </StyledIndexMain>
   );
 };
