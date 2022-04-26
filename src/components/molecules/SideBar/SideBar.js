@@ -9,8 +9,14 @@ const variants = {
   closed: { opacity: 0, right: "-100%" },
 };
 
-export default function SideBar({ show, setShow }) {
-  console.log(show);
+const SideBar = React.forwardRef(({ props }, ref) => {
+  const { show, setShow } = props;
+  console.log(ref);
+
+  const onClickFunc = (ref) => {
+    setShow((show) => !show);
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <StyledSideBar
@@ -36,8 +42,8 @@ export default function SideBar({ show, setShow }) {
           >
             Oferta
           </StyledLink>
-          <StyledLink
-            onClick={() => setShow((show) => !show)}
+          <button
+            onClick={() => onClickFunc(ref[0])}
             hasdeclaredfontsize="14px"
             hasdeclaredfontweight="600"
             hasdeclaredmargin="40px 0"
@@ -46,7 +52,7 @@ export default function SideBar({ show, setShow }) {
             to="/"
           >
             Realizacje
-          </StyledLink>
+          </button>
           <StyledLink
             onClick={() => setShow((show) => !show)}
             hasdeclaredfontsize="14px"
@@ -74,4 +80,6 @@ export default function SideBar({ show, setShow }) {
       </StyledSideBar>
     </>
   );
-}
+});
+
+export default SideBar;

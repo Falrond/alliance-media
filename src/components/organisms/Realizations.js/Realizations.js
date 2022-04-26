@@ -22,7 +22,7 @@ export default function Realizations() {
 
     scrollAnimation2(animateHeader, sectionRef, "20%", "bottom");
     scrollAnimation3(animateWrapper, sectionRef, "20%", "bottom");
-  });
+  }, []);
 
   return (
     <StyledRelizationSection ref={section}>

@@ -20,6 +20,6 @@ export const StyledSideBarButton = styled(motion.button)`
     outline: none;
   }
   @media only screen and (max-width: 916px) {
-    display: flex;
+    display: block;
   }
 `;

@@ -4,8 +4,9 @@ import { StyledFooterWrapper } from "../../atoms/Footer/StyledFooterWrapper";
 import { StyledFooterContactUs } from "../../atoms/Footer/StyledFooterContactUs";
 import { StyledFooterSocials } from "../../atoms/Footer/StyledFooterSocials";
 import { StyledText } from "../../atoms/Text/StyledText";
+import Navigation from "../../molecules/Navigation/Navigation";
 
-export default function Footer() {
+const Footer = React.forwardRef((props, ref) => {
   return (
     <StyledFooterSection>
       <StyledFooterWrapper>
@@ -60,8 +61,12 @@ export default function Footer() {
             info@alliancemedia.pl
           </StyledText>
         </StyledFooterContactUs>
-        <StyledFooterSocials>Logo links i fejsbuk</StyledFooterSocials>
+        <StyledFooterSocials>
+          <Navigation ref={ref} />
+        </StyledFooterSocials>
       </StyledFooterWrapper>
     </StyledFooterSection>
   );
-}
+});
+
+export default Footer;

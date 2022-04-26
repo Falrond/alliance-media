@@ -16,20 +16,20 @@ import { scrollAnimation } from "../../../assets/animations/gsapAnimations";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Services() {
+const Services = React.forwardRef((props, ref) => {
   const headerSliderSection = useRef(null);
   const section = useRef(null);
   const wrapper = useRef(null);
-
+  console.log(ref);
   useEffect(() => {
-    const sectionRef = section.current;
+    // const sectionRef = section.current;
     const animateWrapper = wrapper.current;
-
-    scrollAnimation(animateWrapper, sectionRef, "20%", "bottom");
-  });
+    const servicesRef = ref.current;
+    scrollAnimation(animateWrapper, servicesRef, "20%", "bottom");
+  }, []);
 
   return (
-    <StyledServicesSection ref={section}>
+    <StyledServicesSection ref={ref}>
       <StyledServicesWrapper ref={wrapper}>
         <StyledText
           as="h2"
@@ -268,4 +268,6 @@ export default function Services() {
       </StyledServicesWrapper>
     </StyledServicesSection>
   );
-}
+});
+
+export default Services;

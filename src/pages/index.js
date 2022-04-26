@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/all";
 import Header from "../components/organisms/Header/Header";
 import WhoWeAre from "../components/organisms/WhoWeAre/WhoWeAre";
 import WhatWeOffer from "../components/organisms/WhatWeOffer/WhatWeOffer";
@@ -16,23 +19,57 @@ import Services from "../components/organisms/Services/Services";
 import Footer from "../components/organisms/Footer/Footer";
 
 const IndexPage = ({ data }) => {
+  gsap.registerPlugin(ScrollTrigger);
   const [show, setShow] = useState(false);
   const image = getImage(data.file.childImageSharp);
+  const servicesRef = useRef(null);
+  const aboutUs = useRef(null);
+
+  const container = useRef(null);
+
+  const scrollAnimate = () => {
+    gsap.to(servicesRef.current, {
+      duration: 2,
+    });
+  };
+
+  useEffect(() => {
+    ScrollTrigger.defaults({
+      toggleActions: "restart pause resume pause",
+      scroller: container.current,
+    });
+
+    gsap.to(".jeden h1", {
+      scrollTrigger: {
+        trigger: ".jeden",
+        scroller: container.current,
+        markers: true,
+        scrub: true,
+      },
+      duration: 2,
+    });
+  }, []);
+
   return (
-    <StyledIndexMain>
-      <Header />
+    <StyledIndexMain ref={container}>
+      <Header ref={[servicesRef]} />
       <SideBarButton show={show} setShow={setShow} />
-      <SideBar show={show} setShow={setShow} />
+      <SideBar props={{ show, setShow }} ref={[servicesRef]} />
       <StyledHeroImageWrapper>
         <GatsbyImage image={image} alt="heroImage" />
       </StyledHeroImageWrapper>
       <HeroInfo />
-      <WhoWeAre />
+      <section className="jeden">
+        <h1 className="1">1</h1>
+        <WhoWeAre />
+      </section>
       <WhatWeOffer />
-      {/* <SlickSlider /> */}
       <Realizations />
-      <Services />
-      <Footer />
+      <section className="dwa">
+        <h1 className="2">2</h1>
+        <Services ref={servicesRef} />
+      </section>
+      <Footer ref={[servicesRef]} />
     </StyledIndexMain>
   );
 };

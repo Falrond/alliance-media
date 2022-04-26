@@ -4,7 +4,7 @@ import Logo from "../../molecules/Logo/Logo";
 import Navigation from "../../molecules/Navigation/Navigation";
 import SocialIcons from "../../molecules/SocialIcons/SocialIcons";
 
-export default function Header() {
+const Header = React.forwardRef((props, ref) => {
   return (
     <StyledHeader
       initial={{ y: -150 }}
@@ -18,8 +18,10 @@ export default function Header() {
       }}
     >
       <Logo />
-      <Navigation />
+      <Navigation ref={ref} />
       <SocialIcons />
     </StyledHeader>
   );
-}
+});
+
+export default Header;

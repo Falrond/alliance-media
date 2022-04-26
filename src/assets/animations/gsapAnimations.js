@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export const scrollAnimation = (
   element,
   triggerElement,
@@ -66,4 +68,19 @@ export const scrollAnimation3 = (
       },
     }
   );
+};
+
+export const animationMoveY = (element, toTop) => {
+  if (toTop)
+    gsap.fromTo(
+      element,
+      { autoAlpha: 0, y: "+=100", duration: 1 },
+      { autoAlpha: 1, y: 0 }
+    );
+  else
+    gsap.fromTo(
+      element,
+      { autoAlpha: 0, y: "-=100", duration: 1 },
+      { autoAlpha: 1, y: 0 }
+    );
 };

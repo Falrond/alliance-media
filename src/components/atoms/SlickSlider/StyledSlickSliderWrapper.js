@@ -4,6 +4,7 @@ export const StyledSlickSliderWrapper = styled.div`
   max-width: 1200px;
   min-height: 500px;
   margin: 0 auto;
+  overflow: hidden;
   .slick-arrow::before {
     /* color: #444; */
   }
