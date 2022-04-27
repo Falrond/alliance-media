@@ -6,9 +6,10 @@ import { StyledFooterSocials } from "../../atoms/Footer/StyledFooterSocials";
 import { StyledText } from "../../atoms/Text/StyledText";
 import Navigation from "../../molecules/Navigation/Navigation";
 
-const Footer = React.forwardRef((props, ref) => {
+const Footer = React.forwardRef((props, { contact, ref }) => {
+  console.log(contact);
   return (
-    <StyledFooterSection>
+    <StyledFooterSection ref={contact}>
       <StyledFooterWrapper>
         <StyledFooterContactUs>
           <StyledText

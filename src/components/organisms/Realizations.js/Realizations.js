@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, forwardRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 import { StyledRealizationWrapper } from "../../atoms/Realizations/StyledRealizationsWrapper";
@@ -10,14 +10,14 @@ import { scrollAnimation3 } from "../../../assets/animations/gsapAnimations";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Realizations() {
+const Realizations = forwardRef((props, ref) => {
   const headerSliderSection = useRef(null);
   const section = useRef(null);
   const sliderWrapper = useRef(null);
 
   useEffect(() => {
     const animateHeader = headerSliderSection.current;
-    const sectionRef = section.current;
+    const sectionRef = ref.current;
     const animateWrapper = sliderWrapper.current;
 
     scrollAnimation2(animateHeader, sectionRef, "20%", "bottom");
@@ -25,7 +25,7 @@ export default function Realizations() {
   }, []);
 
   return (
-    <StyledRelizationSection ref={section}>
+    <StyledRelizationSection ref={ref}>
       <StyledText
         ref={headerSliderSection}
         as="h2"
@@ -42,4 +42,6 @@ export default function Realizations() {
       </StyledRealizationWrapper>
     </StyledRelizationSection>
   );
-}
+});
+
+export default Realizations;

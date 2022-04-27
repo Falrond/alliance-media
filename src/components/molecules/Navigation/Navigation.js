@@ -1,9 +1,8 @@
 import React from "react";
 import { StyledNavigation } from "../../atoms/Navigation/StyledNavigation";
-// import { Link } from "gatsby";
 import { StyledLink } from "../../atoms/Link/StyledLink";
 import { useRef, useEffect } from "react";
-import { animationMoveY } from "../../../assets/animations/gsapAnimations";
+import { StyledNavButton } from "../../atoms/Button/StyledNavButton";
 
 const Navigation = React.forwardRef((props, ref) => {
   const navRef = useRef(null);
@@ -11,11 +10,7 @@ const Navigation = React.forwardRef((props, ref) => {
   const scrollInto = (ref) => {
     console.log(ref.current);
     ref.current.scrollIntoView({ behavior: "smooth" });
-    // scrollTo(`.${ref.current.className.split(" ")[0]}`);
   };
-  // useEffect(() => {
-  //   console.log(ref[0].current);
-  // }, []);
 
   return (
     <StyledNavigation
@@ -29,17 +24,7 @@ const Navigation = React.forwardRef((props, ref) => {
         damping: 20,
       }}
     >
-      <StyledLink
-        hasdeclaredfontsize="14px"
-        hasdeclaredfontweight="600"
-        hasdeclaredmargin="0 40px 0 0"
-        hasdeclaredfontcolor="#fff"
-        hasdeclaredtexttransform="uppercase"
-        to="/"
-      >
-        Oferta
-      </StyledLink>
-      <button
+      <StyledNavButton
         onClick={() => scrollInto(ref[0])}
         hasdeclaredfontsize="14px"
         hasdeclaredfontweight="600"
@@ -48,9 +33,11 @@ const Navigation = React.forwardRef((props, ref) => {
         hasdeclaredtexttransform="uppercase"
         to="/"
       >
-        Realizacje
-      </button>
-      <StyledLink
+        O nas
+      </StyledNavButton>
+
+      <StyledNavButton
+        onClick={() => scrollInto(ref[1])}
         hasdeclaredfontsize="14px"
         hasdeclaredfontweight="600"
         hasdeclaredmargin="0 40px 0 0"
@@ -58,17 +45,29 @@ const Navigation = React.forwardRef((props, ref) => {
         hasdeclaredtexttransform="uppercase"
         to="/"
       >
-        Kontakt
-      </StyledLink>
-      <StyledLink
+        Realizacje
+      </StyledNavButton>
+      <StyledNavButton
+        onClick={() => scrollInto(ref[2])}
+        hasdeclaredfontsize="14px"
+        hasdeclaredfontweight="600"
+        hasdeclaredmargin="0 40px 0 0"
+        hasdeclaredfontcolor="#fff"
+        hasdeclaredtexttransform="uppercase"
+        to="/"
+      >
+        Cennik
+      </StyledNavButton>
+      <StyledNavButton
+        onClick={() => scrollInto(ref[3])}
         hasdeclaredfontsize="14px"
         hasdeclaredfontweight="600"
         hasdeclaredfontcolor="#fff"
         hasdeclaredtexttransform="uppercase"
         to="/"
       >
-        Dla akcjonariuszy
-      </StyledLink>
+        Kontakt
+      </StyledNavButton>
     </StyledNavigation>
   );
 });

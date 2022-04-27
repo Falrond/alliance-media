@@ -22,54 +22,32 @@ const IndexPage = ({ data }) => {
   gsap.registerPlugin(ScrollTrigger);
   const [show, setShow] = useState(false);
   const image = getImage(data.file.childImageSharp);
-  const servicesRef = useRef(null);
   const aboutUs = useRef(null);
+  const realizations = useRef(null);
+  const servicesRef = useRef(null);
+  const contact = useRef(null);
 
   const container = useRef(null);
 
-  const scrollAnimate = () => {
-    gsap.to(servicesRef.current, {
-      duration: 2,
-    });
-  };
-
-  useEffect(() => {
-    ScrollTrigger.defaults({
-      toggleActions: "restart pause resume pause",
-      scroller: container.current,
-    });
-
-    gsap.to(".jeden h1", {
-      scrollTrigger: {
-        trigger: ".jeden",
-        scroller: container.current,
-        markers: true,
-        scrub: true,
-      },
-      duration: 2,
-    });
-  }, []);
-
   return (
     <StyledIndexMain ref={container}>
-      <Header ref={[servicesRef]} />
+      <Header ref={[aboutUs, realizations, servicesRef, contact]} />
       <SideBarButton show={show} setShow={setShow} />
-      <SideBar props={{ show, setShow }} ref={[servicesRef]} />
+      <SideBar
+        props={{ show, setShow }}
+        ref={[aboutUs, realizations, servicesRef, contact]}
+      />
       <StyledHeroImageWrapper>
         <GatsbyImage image={image} alt="heroImage" />
       </StyledHeroImageWrapper>
       <HeroInfo />
-      <section className="jeden">
-        <h1 className="1">1</h1>
-        <WhoWeAre />
-      </section>
+      <WhoWeAre ref={aboutUs} />
       <WhatWeOffer />
-      <Realizations />
-      <section className="dwa">
-        <h1 className="2">2</h1>
-        <Services ref={servicesRef} />
-      </section>
-      <Footer ref={[servicesRef]} />
+      <Realizations ref={realizations} />
+      <Services ref={servicesRef} />
+      <Footer
+        ref={{ contact, ref: [aboutUs, realizations, servicesRef, contact] }}
+      />
     </StyledIndexMain>
   );
 };

@@ -12,4 +12,11 @@ export const StyledHeader = styled(motion.header)`
   justify-content: space-between;
   align-items: center;
   /* background-color: #000; */
+  /* transition: all 1s ease; */
+  &.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 1s ease;
+  }
 `;

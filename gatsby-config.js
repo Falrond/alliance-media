@@ -7,6 +7,16 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-page-progress",
+      options: {
+        height: 3,
+        prependToBody: false,
+        color: `#ffc730`,
+        footerHeight: 500,
+        headerHeight: 0,
+      },
+    },
+    {
       resolve: "gatsby-source-datocms",
       options: {
         apiToken: process.env.DATOCMS_TOKEN,

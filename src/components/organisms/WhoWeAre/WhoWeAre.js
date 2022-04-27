@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, forwardRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { StyledWhoWeAreSection } from "../../atoms/WhoWeAre/StyledWhoWeAreSection";
@@ -10,7 +10,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function WhoWeAre() {
+const WhoWeAre = forwardRef((props, ref) => {
   const box1 = useRef(null);
   const box2 = useRef(null);
   const section = useRef(null);
@@ -41,13 +41,13 @@ export default function WhoWeAre() {
   useEffect(() => {
     const animateBox1 = box1.current;
     const animateBox2 = box2.current;
-    const sectionRef = section.current;
+    const sectionRef = ref.current;
 
     scrollAnimation(animateBox1, sectionRef, "80%", "bottom");
     scrollAnimation(animateBox2, sectionRef, "40%", "bottom");
   }, []);
   return (
-    <StyledWhoWeAreSection ref={section}>
+    <StyledWhoWeAreSection ref={ref}>
       <StyledWhoWeAreWrapper>
         <StyledWhoWeAreBox ref={box1}>
           <StyledWhoWeAreImageWrapper>
@@ -96,4 +96,5 @@ export default function WhoWeAre() {
       </StyledWhoWeAreWrapper>
     </StyledWhoWeAreSection>
   );
-}
+});
+export default WhoWeAre;
