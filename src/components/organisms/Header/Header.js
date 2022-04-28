@@ -10,10 +10,10 @@ gsap.registerPlugin(ScrollTrigger);
 const Header = React.forwardRef((props, ref) => {
   // const [stickyClass, setStickyClass] = useState("relative");
   const navBar = useRef(null);
+  const [aboutUs, whatWeOffer, realizations, servicesRef, contact] = ref;
+  const [cssClass, setCssClass] = useState("dark");
 
   useEffect(() => {
-    console.log(navBar);
-
     const showAnim = gsap
       .from(navBar.current, {
         yPercent: -100,
@@ -21,7 +21,19 @@ const Header = React.forwardRef((props, ref) => {
         duration: 0.2,
       })
       .progress(1);
-
+    ref.forEach((trigger) => {
+      ScrollTrigger.create({
+        trigger: trigger.current,
+        start: "top top",
+        end: "bottom top",
+        toggleClass: {
+          targets: navBar.current,
+          className: trigger.current.classList.contains("dark")
+            ? "dark"
+            : "light",
+        },
+      });
+    });
     ScrollTrigger.create({
       start: "top top",
       end: 99999,

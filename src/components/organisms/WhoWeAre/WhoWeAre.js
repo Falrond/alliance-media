@@ -47,7 +47,7 @@ const WhoWeAre = forwardRef((props, ref) => {
     scrollAnimation(animateBox2, sectionRef, "40%", "bottom");
   }, []);
   return (
-    <StyledWhoWeAreSection ref={ref}>
+    <StyledWhoWeAreSection className="dark" ref={ref}>
       <StyledWhoWeAreWrapper>
         <StyledWhoWeAreBox ref={box1}>
           <StyledWhoWeAreImageWrapper>

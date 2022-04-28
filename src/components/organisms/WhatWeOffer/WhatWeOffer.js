@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, forwardRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MdComputer } from "@react-icons/all-files/md/MdComputer";
@@ -13,7 +13,7 @@ import { scrollAnimation } from "../../../assets/animations/gsapAnimations";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function WhatWeOffer() {
+const WhatWeOffer = forwardRef((props, ref) => {
   const box1 = useRef(null);
   const box2 = useRef(null);
   const box3 = useRef(null);
@@ -46,7 +46,7 @@ export default function WhatWeOffer() {
     const animateBox1 = box1.current;
     const animateBox2 = box2.current;
     const animateBox3 = box3.current;
-    const sectionRef = section.current;
+    const sectionRef = ref.current;
     const sectionHeaderRef = sectionHeader.current;
 
     scrollAnimation(animateBox1, sectionRef, "40%", "bottom");
@@ -55,7 +55,7 @@ export default function WhatWeOffer() {
     scrollAnimation(sectionHeaderRef, sectionRef, "top", "90%");
   }, []);
   return (
-    <StyledWhatWeOfferSection ref={section}>
+    <StyledWhatWeOfferSection ref={ref} className="light">
       <StyledWhatWeOfferWrapper>
         <StyledText
           ref={sectionHeader}
@@ -146,4 +146,6 @@ export default function WhatWeOffer() {
       </StyledWhatWeOfferWrapper>
     </StyledWhatWeOfferSection>
   );
-}
+});
+
+export default WhatWeOffer;

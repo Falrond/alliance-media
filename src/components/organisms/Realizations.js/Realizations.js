@@ -25,7 +25,7 @@ const Realizations = forwardRef((props, ref) => {
   }, []);
 
   return (
-    <StyledRelizationSection ref={ref}>
+    <StyledRelizationSection ref={ref} className="dark">
       <StyledText
         ref={headerSliderSection}
         as="h2"

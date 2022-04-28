@@ -7,7 +7,6 @@ import { StyledText } from "../../atoms/Text/StyledText";
 import Navigation from "../../molecules/Navigation/Navigation";
 
 const Footer = React.forwardRef((props, { contact, ref }) => {
-  console.log(contact);
   return (
     <StyledFooterSection ref={contact}>
       <StyledFooterWrapper>

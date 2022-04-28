@@ -8,6 +8,20 @@ export const StyledNavButton = styled.button`
   &:hover {
     color: #ffc730;
   }
+  .dark & {
+    /* background-color: red; */
+    color: #fff;
+    &:hover {
+      color: #ffc730;
+    }
+  }
+  .light & {
+    /* background-color: red; */
+    color: #222;
+    &:hover {
+      color: #ffc730;
+    }
+  }
   font-size: ${({ hasdeclaredfontsize }) =>
     hasdeclaredfontsize ? hasdeclaredfontsize : "16px"};
   font-weight: ${({ hasdeclaredfontweight }) =>

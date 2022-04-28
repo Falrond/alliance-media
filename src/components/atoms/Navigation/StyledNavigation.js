@@ -4,7 +4,11 @@ import { motion } from "framer-motion";
 export const StyledNavigation = styled(motion.nav)`
   display: flex;
   justify-content: space-between;
-  /* margin-right: 40px; */
+
+  /* .dark & {
+    color: #333;
+  } */
+
   > a:hover {
     color: #ffc730;
   }

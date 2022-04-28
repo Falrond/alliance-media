@@ -3,6 +3,8 @@ import { Link } from "gatsby";
 import { StyledLogo } from "../../atoms/Logo/StyledLogo";
 
 import logo from "../../../assets/images/kontra.svg";
+import { ReactComponent as Logotyp } from "../../../assets/images/kontra.svg";
+import SvgComponent from "../../atoms/SvgComponent/SvgComponent";
 
 export default function Logo() {
   return (
@@ -17,7 +19,8 @@ export default function Logo() {
       }}
     >
       <Link to="/">
-        <img src={logo} alt="logo"></img>
+        <SvgComponent />
+        {/* <img src={logo} alt="logo"></img> */}
       </Link>
     </StyledLogo>
   );

@@ -11,7 +11,6 @@ const variants = {
 
 const SideBar = React.forwardRef(({ props }, ref) => {
   const { show, setShow } = props;
-  console.log(ref);
 
   const onClickFunc = (ref) => {
     setShow((show) => !show);

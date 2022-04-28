@@ -17,6 +17,7 @@ import SlickSlider from "../components/organisms/SlickSlider/SlickSlider";
 import Realizations from "../components/organisms/Realizations.js/Realizations";
 import Services from "../components/organisms/Services/Services";
 import Footer from "../components/organisms/Footer/Footer";
+import useIntersection from "../components/atoms/Hooks/useIntersection";
 
 const IndexPage = ({ data }) => {
   gsap.registerPlugin(ScrollTrigger);
@@ -26,12 +27,26 @@ const IndexPage = ({ data }) => {
   const realizations = useRef(null);
   const servicesRef = useRef(null);
   const contact = useRef(null);
+  const whatWeOffer = useRef(null);
 
   const container = useRef(null);
 
+  // const whatWeOfferViewport = useIntersection(whatWeOffer, "-300px");
+  // // const aboutUsViewport = useIntersection(aboutUs, "-300px");
+  // useEffect(() => {
+  //   if (whatWeOfferViewport) {
+  //     console.log("in viewport:", whatWeOffer.current);
+  //   }
+  // }, []);
+  // if (aboutUsViewport) {
+  //   console.log("in viewport:", aboutUs);
+  // }
+
   return (
     <StyledIndexMain ref={container}>
-      <Header ref={[aboutUs, realizations, servicesRef, contact]} />
+      <Header
+        ref={[aboutUs, whatWeOffer, realizations, servicesRef, contact]}
+      />
       <SideBarButton show={show} setShow={setShow} />
       <SideBar
         props={{ show, setShow }}
@@ -42,7 +57,7 @@ const IndexPage = ({ data }) => {
       </StyledHeroImageWrapper>
       <HeroInfo />
       <WhoWeAre ref={aboutUs} />
-      <WhatWeOffer />
+      <WhatWeOffer ref={whatWeOffer} />
       <Realizations ref={realizations} />
       <Services ref={servicesRef} />
       <Footer

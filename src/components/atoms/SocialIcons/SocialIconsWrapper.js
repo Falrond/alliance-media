@@ -16,6 +16,22 @@ export const SocialIconsWrapper = styled.div`
     }
   }
 
+  .dark & {
+    svg {
+      & {
+        color: #fff;
+      }
+    }
+  }
+
+  .light & {
+    svg {
+      & {
+        color: #222;
+      }
+    }
+  }
+
   svg {
     &:hover {
       color: #ffc730;

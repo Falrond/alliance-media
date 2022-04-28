@@ -9,5 +9,24 @@ export const StyledLogo = styled(motion.div)`
   }
   img {
     height: 100%;
+    color: blue;
+  }
+  svg {
+    height: 100%;
+  }
+  .dark & {
+    svg {
+      & {
+        fill: #fff;
+      }
+    }
+  }
+
+  .light & {
+    svg {
+      & {
+        fill: #222;
+      }
+    }
   }
 `;

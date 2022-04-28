@@ -20,7 +20,6 @@ const Services = React.forwardRef((props, ref) => {
   const headerSliderSection = useRef(null);
   const section = useRef(null);
   const wrapper = useRef(null);
-  console.log(ref);
   useEffect(() => {
     // const sectionRef = section.current;
     const animateWrapper = wrapper.current;
@@ -29,7 +28,7 @@ const Services = React.forwardRef((props, ref) => {
   }, []);
 
   return (
-    <StyledServicesSection ref={ref}>
+    <StyledServicesSection ref={ref} className="light">
       <StyledServicesWrapper ref={wrapper}>
         <StyledText
           as="h2"
