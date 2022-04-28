@@ -11,14 +11,17 @@ const Header = React.forwardRef((props, ref) => {
   // const [stickyClass, setStickyClass] = useState("relative");
   const navBar = useRef(null);
 
-  const showAnim = gsap
-    .from(navBar.current, {
-      yPercent: -100,
-      paused: true,
-      duration: 0.2,
-    })
-    .progress(1);
   useEffect(() => {
+    console.log(navBar);
+
+    const showAnim = gsap
+      .from(navBar.current, {
+        yPercent: -100,
+        paused: true,
+        duration: 0.2,
+      })
+      .progress(1);
+
     ScrollTrigger.create({
       start: "top top",
       end: 99999,
@@ -44,7 +47,7 @@ const Header = React.forwardRef((props, ref) => {
   return (
     <StyledHeader
       ref={navBar}
-      initial={{ y: -150 }}
+      // initial={{ y: -150 }}
       animate={{ y: 0 }}
       transition={{
         delay: 0.5,
