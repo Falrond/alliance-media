@@ -13,6 +13,7 @@ import { AiOutlineCheck } from "@react-icons/all-files/ai/AiOutlineCheck";
 import { BsBrush } from "@react-icons/all-files/bs/BsBrush";
 import { BiStore } from "@react-icons/all-files/bi/BiStore";
 import { scrollAnimation } from "../../../assets/animations/gsapAnimations";
+import { StyledIconWrapper } from "../../atoms/Services/StyledIconWrapper";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -73,28 +74,52 @@ const Services = React.forwardRef((props, ref) => {
               PLN
             </StyledText>
             <StyledSubpointWraper>
-              <AiOutlineCheck size={20} color={"#ffc730"} fontWeight={"bold"} />
+              <StyledIconWrapper>
+                <AiOutlineCheck
+                  size={20}
+                  color={"#ffc730"}
+                  fontWeight={"bold"}
+                />
+              </StyledIconWrapper>
               <StyledText hasdeclaredmargin="0 0 0 10px">
                 {" "}
                 2 wstępne projekty
               </StyledText>
             </StyledSubpointWraper>
             <StyledSubpointWraper>
-              <AiOutlineCheck size={20} color={"#ffc730"} fontWeight={"bold"} />
+              <StyledIconWrapper>
+                <AiOutlineCheck
+                  size={20}
+                  color={"#ffc730"}
+                  fontWeight={"bold"}
+                />
+              </StyledIconWrapper>
               <StyledText hasdeclaredmargin="0 0 0 10px">
                 {" "}
                 4 modyfikacje wybranego projektu
               </StyledText>
             </StyledSubpointWraper>
             <StyledSubpointWraper>
-              <AiOutlineCheck size={20} color={"#ffc730"} fontWeight={"bold"} />
+              <StyledIconWrapper>
+                <AiOutlineCheck
+                  size={20}
+                  color={"#ffc730"}
+                  fontWeight={"bold"}
+                />
+              </StyledIconWrapper>
               <StyledText hasdeclaredmargin="0 0 0 10px">
                 {" "}
                 Nielimitowane poprawki wybranego projektu
               </StyledText>
             </StyledSubpointWraper>
             <StyledSubpointWraper>
-              <AiOutlineCheck size={20} color={"#ffc730"} fontWeight={"bold"} />
+              <StyledIconWrapper>
+                <AiOutlineCheck
+                  size={20}
+                  color={"#ffc730"}
+                  fontWeight={"bold"}
+                />
+              </StyledIconWrapper>
               <StyledText hasdeclaredmargin="0 0 0 10px">
                 {" "}
                 Logo w plikach PDF, PNG, JPEG
@@ -134,21 +159,39 @@ const Services = React.forwardRef((props, ref) => {
               PLN
             </StyledText>
             <StyledSubpointWraper>
-              <AiOutlineCheck size={20} color={"#ffc730"} fontWeight={"bold"} />
+              <StyledIconWrapper>
+                <AiOutlineCheck
+                  size={20}
+                  color={"#ffc730"}
+                  fontWeight={"bold"}
+                />
+              </StyledIconWrapper>
               <StyledText hasdeclaredmargin="0 0 0 10px">
                 {" "}
                 typografia, kolorystyka
               </StyledText>
             </StyledSubpointWraper>
             <StyledSubpointWraper>
-              <AiOutlineCheck size={20} color={"#ffc730"} fontWeight={"bold"} />
+              <StyledIconWrapper>
+                <AiOutlineCheck
+                  size={20}
+                  color={"#ffc730"}
+                  fontWeight={"bold"}
+                />
+              </StyledIconWrapper>
               <StyledText hasdeclaredmargin="0 0 0 10px">
                 {" "}
                 szata materiałów drukowanych firmy
               </StyledText>
             </StyledSubpointWraper>
             <StyledSubpointWraper>
-              <AiOutlineCheck size={20} color={"#ffc730"} fontWeight={"bold"} />
+              <StyledIconWrapper>
+                <AiOutlineCheck
+                  size={20}
+                  color={"#ffc730"}
+                  fontWeight={"bold"}
+                />
+              </StyledIconWrapper>
               <StyledText hasdeclaredmargin="0 0 0 10px">
                 {" "}
                 szablon grafik mediów społecznościowych
@@ -188,21 +231,39 @@ const Services = React.forwardRef((props, ref) => {
               PLN
             </StyledText>
             <StyledSubpointWraper>
-              <AiOutlineCheck size={20} color={"#ffc730"} fontWeight={"bold"} />
+              <StyledIconWrapper>
+                <AiOutlineCheck
+                  size={20}
+                  color={"#ffc730"}
+                  fontWeight={"bold"}
+                />
+              </StyledIconWrapper>
               <StyledText hasdeclaredmargin="0 0 0 10px">
                 {" "}
                 1 podstrona
               </StyledText>
             </StyledSubpointWraper>
             <StyledSubpointWraper>
-              <AiOutlineCheck size={20} color={"#ffc730"} fontWeight={"bold"} />
+              <StyledIconWrapper>
+                <AiOutlineCheck
+                  size={20}
+                  color={"#ffc730"}
+                  fontWeight={"bold"}
+                />
+              </StyledIconWrapper>
               <StyledText hasdeclaredmargin="0 0 0 10px">
                 {" "}
                 Indywidualny projekt str. głównej + 2 modyfikacje
               </StyledText>
             </StyledSubpointWraper>
             <StyledSubpointWraper>
-              <AiOutlineCheck size={20} color={"#ffc730"} fontWeight={"bold"} />
+              <StyledIconWrapper>
+                <AiOutlineCheck
+                  size={20}
+                  color={"#ffc730"}
+                  fontWeight={"bold"}
+                />
+              </StyledIconWrapper>
               <StyledText hasdeclaredmargin="0 0 0 10px">
                 {" "}
                 Czas pracy projektanta do 40 godz.
@@ -242,21 +303,39 @@ const Services = React.forwardRef((props, ref) => {
               PLN
             </StyledText>
             <StyledSubpointWraper>
-              <AiOutlineCheck size={20} color={"#ffc730"} fontWeight={"bold"} />
+              <StyledIconWrapper>
+                <AiOutlineCheck
+                  size={20}
+                  color={"#ffc730"}
+                  fontWeight={"bold"}
+                />
+              </StyledIconWrapper>
               <StyledText hasdeclaredmargin="0 0 0 10px">
                 {" "}
                 Indywidualny projekt str. głównej
               </StyledText>
             </StyledSubpointWraper>
             <StyledSubpointWraper>
-              <AiOutlineCheck size={20} color={"#ffc730"} fontWeight={"bold"} />
+              <StyledIconWrapper>
+                <AiOutlineCheck
+                  size={20}
+                  color={"#ffc730"}
+                  fontWeight={"bold"}
+                />
+              </StyledIconWrapper>
               <StyledText hasdeclaredmargin="0 0 0 10px">
                 {" "}
                 4 modyfikacje wybranego projektu
               </StyledText>
             </StyledSubpointWraper>
             <StyledSubpointWraper>
-              <AiOutlineCheck size={20} color={"#ffc730"} fontWeight={"bold"} />
+              <StyledIconWrapper>
+                <AiOutlineCheck
+                  size={20}
+                  color={"#ffc730"}
+                  fontWeight={"bold"}
+                />
+              </StyledIconWrapper>
               <StyledText hasdeclaredmargin="0 0 0 10px">
                 {" "}
                 Czas pracy projektanta do 80 godz.

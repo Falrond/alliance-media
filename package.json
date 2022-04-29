@@ -36,6 +36,7 @@
     "react-medium-image-zoom": "^4.3.7",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "smooth-scrollbar": "^8.7.4",
     "styled-components": "^5.3.5"
   }
 }

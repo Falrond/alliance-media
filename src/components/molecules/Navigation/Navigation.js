@@ -37,7 +37,7 @@ const Navigation = React.forwardRef((props, ref) => {
       </StyledNavButton>
 
       <StyledNavButton
-        onClick={() => scrollInto(ref[1])}
+        onClick={() => scrollInto(ref[2])}
         hasdeclaredfontsize="14px"
         hasdeclaredfontweight="600"
         hasdeclaredmargin="0 40px 0 0"
@@ -48,7 +48,7 @@ const Navigation = React.forwardRef((props, ref) => {
         Realizacje
       </StyledNavButton>
       <StyledNavButton
-        onClick={() => scrollInto(ref[2])}
+        onClick={() => scrollInto(ref[3])}
         hasdeclaredfontsize="14px"
         hasdeclaredfontweight="600"
         hasdeclaredmargin="0 40px 0 0"
@@ -59,7 +59,7 @@ const Navigation = React.forwardRef((props, ref) => {
         Cennik
       </StyledNavButton>
       <StyledNavButton
-        onClick={() => scrollInto(ref[3])}
+        onClick={() => scrollInto(ref[4])}
         hasdeclaredfontsize="14px"
         hasdeclaredfontweight="600"
         hasdeclaredfontcolor="#fff"

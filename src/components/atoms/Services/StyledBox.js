@@ -5,7 +5,7 @@ export const StyledBox = styled.div`
   min-height: 395px;
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding: 20px;
   justify-content: space-between;
   align-items: center;
   border: 1px solid #ffc730;
