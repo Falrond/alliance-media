@@ -41,21 +41,7 @@ const Header = React.forwardRef((props, ref) => {
         self.direction === -1 ? showAnim.play() : showAnim.reverse();
       },
     });
-
-    // gsap.to(
-    //   navBar.current,
-    //   // { y: 0, opacity: 0 },
-    //   {
-    //     position: "fixed",
-    //     y: 0,
-    //     scrollTrigger: {
-    //       start: "top -135",
-    //       end: 99999,
-    //       toggleActions: "play none none reverse",
-    //     },
-    //   }
-    // );
-  }, []);
+  }, [ref]);
   return (
     <StyledHeader
       ref={navBar}

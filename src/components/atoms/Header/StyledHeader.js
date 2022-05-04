@@ -11,12 +11,12 @@ export const StyledHeader = styled(motion.header)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
-  transition: background-color 0.2s ease;
+  background-color: rgb(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
   &.dark {
-    /* background-color: white; */
+    background-color: rgb(0, 0, 0, 0.5);
   }
   &.light {
-    /* background-color: #1c1d21; */
+    background-color: rgb(255, 255, 255, 0.9);
   }
 `;

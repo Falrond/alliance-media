@@ -26,18 +26,18 @@ const Realizations = forwardRef((props, ref) => {
 
   return (
     <StyledRelizationSection ref={ref} className="dark">
-      <StyledText
-        ref={headerSliderSection}
-        as="h2"
-        hasdeclaredfontsize="44px"
-        hasdeclaredfontweight="700"
-        hasdeclaredtextalign="center"
-        hasdeclaredfontcolor="#eeeeee"
-        hasdeclaredmargin="100px 0 80px 0"
-      >
-        Przykładowe realizacje
-      </StyledText>
       <StyledRealizationWrapper ref={sliderWrapper}>
+        <StyledText
+          ref={headerSliderSection}
+          as="h2"
+          hasdeclaredfontsize="44px"
+          hasdeclaredfontweight="700"
+          hasdeclaredtextalign="left"
+          hasdeclaredfontcolor="#eeeeee"
+          hasdeclaredmargin="100px 0 80px 30px"
+        >
+          Przykładowe realizacje
+        </StyledText>
         <SlickSlider />
       </StyledRealizationWrapper>
     </StyledRelizationSection>

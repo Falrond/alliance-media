@@ -24,7 +24,7 @@ const SideBar = React.forwardRef(({ props }, ref) => {
         transition={{
           delay: 0.05,
           duration: 0.4,
-          type: "spring",
+          // type: "spring",
           //   stiffness: 100,
           damping: 8,
         }}

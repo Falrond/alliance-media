@@ -71,7 +71,7 @@ export default function SlickSlider() {
               node {
                 relativePath
                 childImageSharp {
-                  gatsbyImageData
+                  gatsbyImageData(width: 800)
                 }
               }
             }

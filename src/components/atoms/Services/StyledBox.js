@@ -13,4 +13,12 @@ export const StyledBox = styled.div`
   &:last-of-type {
     border-right: 1px solid #ffc730;
   }
+
+  @media only screen and (max-width: 916px) {
+    /* border-right: 1px solid #ffc730; */
+    border: none;
+    &:last-of-type {
+      border-right: none;
+    }
+  }
 `;

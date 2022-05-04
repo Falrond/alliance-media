@@ -10,4 +10,8 @@ export const StyledHeroInfoWrapper = styled(motion.div)`
   padding: 50px;
   &:hover {
   }
+
+  @media only screen and (max-width: 916px) {
+    width: 100%;
+  }
 `;

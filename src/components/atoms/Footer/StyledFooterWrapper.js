@@ -6,4 +6,8 @@ export const StyledFooterWrapper = styled.div`
   color: white;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 916px) {
+    flex-direction: column;
+  }
 `;

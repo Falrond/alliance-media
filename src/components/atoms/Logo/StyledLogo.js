@@ -29,4 +29,9 @@ export const StyledLogo = styled(motion.div)`
       }
     }
   }
+
+  @media only screen and (max-width: 916px) {
+    padding: 8px 0;
+    margin-left: 0;
+  }
 `;
