@@ -14,4 +14,7 @@ export const StyledWhatWeOfferSection = styled.section`
     rgba(243, 253, 255, 1) 100%
   ); */
   /* height: 100vh; */
+  @media only screen and (max-width: 916px) {
+    padding: 50px 0 30px 0;
+  }
 `;

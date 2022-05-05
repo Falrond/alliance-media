@@ -3,6 +3,7 @@ import { StyledSideBar } from "../../atoms/SideBar/StyledSideBar";
 import { StyledSideBarWrapper } from "../../atoms/SideBar/StyledSideBarWrapper";
 import { StyledLink } from "../../atoms/Link/StyledLink";
 import SocialIcons from "../SocialIcons/SocialIcons";
+import { StyledNavButton } from "../../atoms/Button/StyledNavButton";
 
 const variants = {
   open: { opacity: 1, right: 0 },
@@ -30,18 +31,7 @@ const SideBar = React.forwardRef(({ props }, ref) => {
         }}
       >
         <StyledSideBarWrapper>
-          <StyledLink
-            onClick={() => setShow((show) => !show)}
-            hasdeclaredfontsize="14px"
-            hasdeclaredfontweight="600"
-            hasdeclaredmargin="40px 0"
-            hasdeclaredfontcolor="#fff"
-            hasdeclaredtexttransform="uppercase"
-            to="/"
-          >
-            Oferta
-          </StyledLink>
-          <button
+          <StyledNavButton
             onClick={() => onClickFunc(ref[0])}
             hasdeclaredfontsize="14px"
             hasdeclaredfontweight="600"
@@ -50,10 +40,32 @@ const SideBar = React.forwardRef(({ props }, ref) => {
             hasdeclaredtexttransform="uppercase"
             to="/"
           >
+            O nas
+          </StyledNavButton>
+          <StyledNavButton
+            onClick={() => onClickFunc(ref[2])}
+            hasdeclaredfontsize="14px"
+            hasdeclaredfontweight="600"
+            hasdeclaredmargin="40px 0"
+            hasdeclaredfontcolor="#fff"
+            hasdeclaredtexttransform="uppercase"
+            to="/"
+          >
             Realizacje
-          </button>
-          <StyledLink
-            onClick={() => setShow((show) => !show)}
+          </StyledNavButton>
+          <StyledNavButton
+            onClick={() => onClickFunc(ref[3])}
+            hasdeclaredfontsize="14px"
+            hasdeclaredfontweight="600"
+            hasdeclaredmargin="40px 0"
+            hasdeclaredfontcolor="#fff"
+            hasdeclaredtexttransform="uppercase"
+            to="/"
+          >
+            Cennik
+          </StyledNavButton>
+          <StyledNavButton
+            onClick={() => onClickFunc(ref[4])}
             hasdeclaredfontsize="14px"
             hasdeclaredfontweight="600"
             hasdeclaredmargin="40px 0"
@@ -62,18 +74,7 @@ const SideBar = React.forwardRef(({ props }, ref) => {
             to="/"
           >
             Kontakt
-          </StyledLink>
-          <StyledLink
-            onClick={() => setShow((show) => !show)}
-            hasdeclaredfontsize="14px"
-            hasdeclaredfontweight="600"
-            hasdeclaredmargin="40px 0"
-            hasdeclaredfontcolor="#fff"
-            hasdeclaredtexttransform="uppercase"
-            to="/"
-          >
-            Dla akcjonariuszy
-          </StyledLink>
+          </StyledNavButton>
           <SocialIcons />
         </StyledSideBarWrapper>
       </StyledSideBar>

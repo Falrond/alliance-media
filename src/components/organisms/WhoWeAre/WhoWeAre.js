@@ -43,7 +43,7 @@ const WhoWeAre = forwardRef((props, ref) => {
     const animateBox2 = box2.current;
     const sectionRef = ref.current;
 
-    scrollAnimation(animateBox1, sectionRef, "80%", "bottom");
+    scrollAnimation(animateBox1, sectionRef, "35%", "bottom");
     scrollAnimation(animateBox2, sectionRef, "40%", "bottom");
   }, []);
   return (

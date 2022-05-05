@@ -7,4 +7,8 @@ export const StyledFooterContactUs = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 916px) {
+    width: auto;
+  }
 `;

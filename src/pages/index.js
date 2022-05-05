@@ -18,9 +18,13 @@ import Scrollbar from "smooth-scrollbar";
 import { ScrollContainer } from "../components/atoms/ScrollContainer/ScrollContainer";
 
 const IndexPage = ({ data }) => {
+  const title1 = data.allDatoCmsHerosection.nodes[0].title1;
+  const title2 = data.allDatoCmsHerosection.nodes[0].title2;
   gsap.registerPlugin(ScrollTrigger);
   const [show, setShow] = useState(false);
   const image = getImage(data.file.childImageSharp);
+  const imagefromCMS = getImage(data.allDatoCmsHerosection.nodes[0].heroImg);
+  console.log(imagefromCMS);
   const aboutUs = useRef(null);
   const realizations = useRef(null);
   const servicesRef = useRef(null);
@@ -30,27 +34,6 @@ const IndexPage = ({ data }) => {
   const container = useRef(null);
   const scrollContainer = useRef(null);
 
-  // useEffect(() => {
-  //   const scroller = container.current;
-  //   const bodyScrollBar = Scrollbar.init(scroller, {
-  //     damping: 0.1,
-  //     delegateTo: document,
-  //     alwaysShowTracks: true,
-  //   });
-
-  //   ScrollTrigger.scrollerProxy(scroller, {
-  //     scrollTop(value) {
-  //       if (arguments.length) {
-  //         bodyScrollBar.scrollTop = value;
-  //       }
-  //       return bodyScrollBar.scrollTop;
-  //     },
-  //   });
-
-  //   bodyScrollBar.addListener(ScrollTrigger.update);
-
-  //   ScrollTrigger.defaults({ scroller: scroller });
-  // }, []);
   return (
     <StyledIndexMain ref={container}>
       <Header
@@ -63,9 +46,9 @@ const IndexPage = ({ data }) => {
           ref={[aboutUs, whatWeOffer, realizations, servicesRef, contact]}
         />
         <StyledHeroImageWrapper>
-          <GatsbyImage image={image} alt="heroImage" />
+          <GatsbyImage image={imagefromCMS} alt="heroImage" />
         </StyledHeroImageWrapper>
-        <HeroInfo />
+        <HeroInfo props={{ title1, title2 }} />
         <WhoWeAre ref={aboutUs} />
         <WhatWeOffer ref={whatWeOffer} />
         <Realizations ref={realizations} />
@@ -86,6 +69,16 @@ export const query = graphql`
     file(relativePath: { eq: "hero7.jpg" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+      }
+    }
+    allDatoCmsHerosection {
+      nodes {
+        title1
+        title2
+        heroDesc
+        heroImg {
+          gatsbyImageData(layout: FULL_WIDTH)
+        }
       }
     }
   }

@@ -12,6 +12,21 @@ export const StyledHeroInfoWrapper = styled(motion.div)`
   }
 
   @media only screen and (max-width: 916px) {
+    /* top: 240px; */
+    padding: 20px;
     width: 100%;
+    h1 {
+      font-size: 35px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    top: 240px;
   }
 `;

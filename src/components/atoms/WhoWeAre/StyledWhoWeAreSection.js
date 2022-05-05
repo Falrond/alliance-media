@@ -7,4 +7,8 @@ export const StyledWhoWeAreSection = styled.section`
   justify-content: center; */
 
   background: #1c1d21;
+
+  @media only screen and (max-width: 916px) {
+    padding: 30px 0 30px 0;
+  }
 `;

@@ -48,8 +48,8 @@ const Header = React.forwardRef((props, ref) => {
       // initial={{ y: -150 }}
       animate={{ y: 0 }}
       transition={{
-        delay: 0.5,
-        duration: 0.3,
+        delay: 0.3,
+        duration: 0.2,
         // type: "spring",
         // // stiffness: 260,
         // damping: 10,

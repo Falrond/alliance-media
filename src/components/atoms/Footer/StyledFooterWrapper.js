@@ -9,5 +9,6 @@ export const StyledFooterWrapper = styled.div`
 
   @media only screen and (max-width: 916px) {
     flex-direction: column;
+    align-items: center;
   }
 `;

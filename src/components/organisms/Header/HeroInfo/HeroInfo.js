@@ -4,13 +4,15 @@ import { StyledHeroInfoWrapper } from "../../../atoms/HeroInfo/StyledHeroInfoWra
 import { StyledText } from "../../../atoms/Text/StyledText";
 import { StyledButtonsWrapper } from "../../../atoms/HeroInfo/StyledButtonsWrapper";
 
-export default function HeroInfo() {
+export default function HeroInfo({ props }) {
+  const { title1, title2 } = props;
+
   return (
     <StyledHeroInfoWrapper
       initial={{ y: -900 }}
       animate={{ y: 0 }}
       transition={{
-        delay: 1.1,
+        delay: 0.5,
         duration: 1.2,
         type: "spring",
         // stiffness: 260,
@@ -24,7 +26,7 @@ export default function HeroInfo() {
         hasdeclaredfontweight="600"
         hasdeclaredfontsize="55px"
       >
-        Pomożemy Ci zaistnieć
+        {title1}
       </StyledText>
       <StyledText
         as="h2"
@@ -33,7 +35,7 @@ export default function HeroInfo() {
         hasdeclaredfontsize="45px"
         hasdeclaredmargin="0 0 30px 0"
       >
-        Zbudujemy Twoją markę
+        {title2}
       </StyledText>
       <StyledText
         hasdeclaredfontcolor="#fff"
