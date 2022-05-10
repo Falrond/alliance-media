@@ -52,7 +52,7 @@ const WhoWeAre = forwardRef((props, ref) => {
         <StyledWhoWeAreBox ref={box1}>
           <StyledWhoWeAreImageWrapper>
             <StaticImage
-              src="../../../assets/images/oferta_bg.png"
+              src="../../../assets/images/ilustracja.png"
               alt="sectionImage"
               quality={100}
             />
