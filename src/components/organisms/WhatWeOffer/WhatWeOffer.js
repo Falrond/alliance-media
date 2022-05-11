@@ -72,7 +72,7 @@ const WhatWeOffer = forwardRef((props, ref) => {
         </StyledText> */}
         <StyledBoxWrapper>
           <StyledBox ref={box1}>
-            <MdComputer size={50} />
+            <MdComputer size={50} color="#ffc730" />
             <StyledText
               hasdeclaredtextalign="center"
               hasdeclaredfontsize="24px"
@@ -95,7 +95,7 @@ const WhatWeOffer = forwardRef((props, ref) => {
             </StyledText>
           </StyledBox>
           <StyledBox ref={box2}>
-            <IoIosColorPalette size={50} />
+            <IoIosColorPalette size={50} color="#ffc730" />
             <StyledText
               hasdeclaredtextalign="center"
               hasdeclaredfontsize="24px"
@@ -119,7 +119,7 @@ const WhatWeOffer = forwardRef((props, ref) => {
             </StyledText>
           </StyledBox>
           <StyledBox ref={box3}>
-            <RiArticleLine size={50} />
+            <RiArticleLine size={50} color="#ffc730" />
             <StyledText
               hasdeclaredtextalign="center"
               hasdeclaredfontsize="24px"
