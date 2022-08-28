@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export const StyledHeader = styled(motion.header)`
   width: 100%;
   height: 90px;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   z-index: 2;
@@ -12,6 +12,7 @@ export const StyledHeader = styled(motion.header)`
   justify-content: space-between;
   align-items: center;
   background-color: rgb(0, 0, 0, 0.5);
+  /* background-color: #1c1d21; */
   transition: all 0.1s linear;
   -webkit-box-shadow: 0px 5px 40px -13px rgba(0, 0, 0, 1);
   -moz-box-shadow: 0px 5px 40px -13px rgba(0, 0, 0, 1);

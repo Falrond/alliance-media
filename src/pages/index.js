@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "../components/organisms/Header/Header";
+import AnimatedLogo from "../components/molecules/AnimatedLogo/AnimatedLogo";
 import WhoWeAre from "../components/organisms/WhoWeAre/WhoWeAre";
 import WhatWeOffer from "../components/organisms/WhatWeOffer/WhatWeOffer";
 import HeroInfo from "../components/organisms/Header/HeroInfo/HeroInfo";
@@ -36,6 +37,9 @@ const IndexPage = ({ data }) => {
 
   return (
     <StyledIndexMain ref={container}>
+      <AnimatedLogo
+        ref={[aboutUs, whatWeOffer, realizations, servicesRef, contact]}
+      />
       <Header
         ref={[aboutUs, whatWeOffer, realizations, servicesRef, contact]}
       />

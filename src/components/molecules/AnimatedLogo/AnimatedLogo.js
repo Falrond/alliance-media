@@ -1,15 +1,14 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import { Link } from "gatsby";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { StyledHeader } from "../../atoms/Header/StyledHeader";
+import { StyledAnimationLogo } from "../../atoms/AnimationLogo/StyledAnimationLogo";
 import Logo from "../../molecules/Logo/Logo";
-import Navigation from "../../molecules/Navigation/Navigation";
 import SvgComponent from "../../atoms/SvgComponent/SvgComponent";
-import SocialIcons from "../../molecules/SocialIcons/SocialIcons";
 import { useState } from "react";
+import SvgLogoComponent from "../../atoms/SvgLogoComponent/SvgLogoComponent";
 gsap.registerPlugin(ScrollTrigger);
-const Header = React.forwardRef((props, ref) => {
-  // const [stickyClass, setStickyClass] = useState("relative");
+const AnimatedLogo = React.forwardRef((props, ref) => {
   const navBar = useRef(null);
   const [aboutUs, whatWeOffer, realizations, servicesRef, contact] = ref;
   const [cssClass, setCssClass] = useState("dark");
@@ -35,19 +34,27 @@ const Header = React.forwardRef((props, ref) => {
         },
       });
     });
+    ScrollTrigger.create({
+      start: "top -100",
+      end: 99999,
+      toggleClass: { className: "down", targets: navBar.current },
+      //   onUpdate: (self) => {
+      //     self.direction === 1 ? showAnim.play() : showAnim.reverse();
+      //   },
+    });
     // ScrollTrigger.create({
-    //   start: "top top",
-    //   end: 99999,
-    //   onUpdate: (self) => {
-    //     self.direction === -1 ? showAnim.play() : showAnim.reverse();
-    //   },
-    // });
+    //     start: "top top",
+    //     end: 99999,
+    //     onUpdate: (self) => {
+    //       self.direction === 1 ? showAnim.play() : showAnim.reverse();
+    //     },
+    //   });
   }, [ref]);
   return (
-    <StyledHeader
+    <StyledAnimationLogo
       ref={navBar}
       // initial={{ y: -150 }}
-      // animate={{ y: 0 }}
+      animate={{ y: 0 }}
       transition={{
         delay: 0.3,
         duration: 0.2,
@@ -57,12 +64,10 @@ const Header = React.forwardRef((props, ref) => {
       }}
     >
       <Logo>
-        <SvgComponent />
+        <SvgLogoComponent />
       </Logo>
-      <Navigation ref={ref} />
-      <SocialIcons />
-    </StyledHeader>
+    </StyledAnimationLogo>
   );
 });
 
-export default Header;
+export default AnimatedLogo;

@@ -6,7 +6,7 @@ import logo from "../../../assets/images/kontra.svg";
 import { ReactComponent as Logotyp } from "../../../assets/images/kontra.svg";
 import SvgComponent from "../../atoms/SvgComponent/SvgComponent";
 
-export default function Logo() {
+export default function Logo({ children }) {
   return (
     <StyledLogo
       initial={{ x: -700 }}
@@ -19,7 +19,8 @@ export default function Logo() {
       }}
     >
       <Link to="/">
-        <SvgComponent />
+        {/* <SvgComponent /> */}
+        {children}
         {/* <img src={logo} alt="logo"></img> */}
       </Link>
     </StyledLogo>
